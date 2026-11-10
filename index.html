@@ -123,7 +123,7 @@
   <nav>
     <a href="#sobre">Sobre</a>
     <a href="#avisos">Avisos</a>
-    <a href="#atas">Atas de Reunião</a>
+    <a href="#atas">Atas e Documentos</a>
     <a href="#contato">Contato</a>
   </nav>
 
@@ -139,17 +139,27 @@
       <ul>
         <li><strong>Horário de Funcionamento da Sala do CA:</strong> Segunda a Sexta, das 12h às 14h.</li>
         <li><strong>Próxima Assembleia Geral:</strong> Confirme presença na reunião do dia 20 deste mês.</li>
-        <li><strong>Carteirinha Estudantil:</strong> Solicições de renovação abertas no sistema da USP.</li>
+        <li><strong>Carteirinha Estudantil:</strong> Solicitações de renovação abertas no sistema da USP.</li>
       </ul>
     </section>
 
     <section id="atas">
       <h2>Atas e Documentos</h2>
-      <input type="text" id="searchInput" class="search-box" placeholder="Buscar atas por ano ou palavra-chave..." onkeyup="filterDocs()">
+      <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #555;">Clique em qualquer documento para abri-lo diretamente no navegador. Use a busca para filtrar rapidamente:</p>
+      
+      <input type="text" id="searchInput" class="search-box" placeholder="Buscar atas por ano ou palavra-chave (ex: estatuto, fevereiro)..." onkeyup="filterDocs()">
+      
       <ul id="docList">
-        <li class="doc-item"><a href="documentos/ata-2026-02.pdf" target="_blank" class="doc-link">Ata de Reunião Ordinária - Fevereiro/2026 (PDF)</a></li>
-        <li class="doc-item"><a href="documentos/ata-2026-01.pdf" target="_blank" class="doc-link">Ata de Reunião Ordinária - Janeiro/2026 (PDF)</a></li>
-        <li class="doc-item"><a href="documentos/estatuto-ca.pdf" target="_blank" class="doc-link">Estatuto do Centro Acadêmico (PDF)</a></li>
+        <!-- Substitua o nome dentro de href="documentos/NOME-DO-ARQUIVO.pdf" pelo nome exato do seu arquivo PDF -->
+        <li class="doc-item">
+          <a href="teste.pdf" target="_blank" class="doc-link">📄 Ata de Reunião Ordinária - Fevereiro/2026</a>
+        </li>
+        <li class="doc-item">
+          <a href="documentos/ata-2026-01.pdf" target="_blank" class="doc-link">📄 Ata de Reunião Ordinária - Janeiro/2026</a>
+        </li>
+        <li class="doc-item">
+          <a href="documentos/estatuto-ca.pdf" target="_blank" class="doc-link">📜 Estatuto do Centro Acadêmico</a>
+        </li>
       </ul>
     </section>
 
