@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro Acadêmico - EERP USP RP</title>
+  <style>
+    :root {
+      --primary: #004677;
+      --secondary: #0077b6;
+      --accent: #90e0ef;
+      --bg: #f8f9fa;
+      --text: #212529;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: var(--secondary);
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0.8rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3rem;
+    }
+
+    .search-box {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    .doc-link {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .doc-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: var(--primary);
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Centro Acadêmico EERP - USP RP</h1>
+    <p>Escola de Enfermagem de Ribeirão Preto</p>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#avisos">Avisos</a>
+    <a href="#atas">Atas de Reunião</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div class="container">
+    
+    <section id="sobre">
+      <h2>Sobre o Centro Acadêmico</h2>
+      <p>O Centro Acadêmico representa os estudantes da Escola de Enfermagem de Ribeirão Preto da Universidade de São Paulo. Nosso objetivo é garantir os direitos dos alunos, organizar eventos de integração e servir como ponte entre o corpo discente e a direção.</p>
+    </section>
+
+    <section id="avisos">
+      <h2>Avisos Úteis</h2>
+      <ul>
+        <li><strong>Horário de Funcionamento da Sala do CA:</strong> Segunda a Sexta, das 12h às 14h.</li>
+        <li><strong>Próxima Assembleia Geral:</strong> Confirme presença na reunião do dia 20 deste mês.</li>
+        <li><strong>Carteirinha Estudantil:</strong> Solicições de renovação abertas no sistema da USP.</li>
+      </ul>
+    </section>
+
+    <section id="atas">
+      <h2>Atas e Documentos</h2>
+      <input type="text" id="searchInput" class="search-box" placeholder="Buscar atas por ano ou palavra-chave..." onkeyup="filterDocs()">
+      <ul id="docList">
+        <li class="doc-item"><a href="documentos/ata-2026-02.pdf" target="_blank" class="doc-link">Ata de Reunião Ordinária - Fevereiro/2026 (PDF)</a></li>
+        <li class="doc-item"><a href="documentos/ata-2026-01.pdf" target="_blank" class="doc-link">Ata de Reunião Ordinária - Janeiro/2026 (PDF)</a></li>
+        <li class="doc-item"><a href="documentos/estatuto-ca.pdf" target="_blank" class="doc-link">Estatuto do Centro Acadêmico (PDF)</a></li>
+      </ul>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p><strong>E-mail:</strong> ca.eerp@usp.br</p>
+      <p><strong>Instagram:</strong> @caeerpusp</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Centro Acadêmico EERP - USP RP</p>
+  </footer>
+
+  <script>
+    function filterDocs() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const items = document.querySelectorAll('.doc-item');
+
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(input)) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
